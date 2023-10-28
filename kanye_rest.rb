@@ -25,7 +25,7 @@ confirmation = gets.chomp
 confirmation1 = "Yes"
 confirmation2 = "No"
 
-if confirmation == "Yes"
+if confirmation == confirmation1
   puts "Great! While we get your account set up, please enjoy this quote by Kanye West."
   response = HTTP.get('https://api.kanye.rest')
 
@@ -34,6 +34,6 @@ data = response.parse
 pp data
 end
 
-if confirmation == "No"
+if confirmation == confirmation2
   puts "Okay! We'll give you access to your profile shortly to make changes."
 end
